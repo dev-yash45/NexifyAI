@@ -38,6 +38,17 @@ An AI-powered career development platform that helps users improve their resumes
 - Performance Tracking
 - Growth Potential Analysis
 
+### 🤖 AI Career Mentor
+- Personalized Career Guidance
+- Career Roadmap Generation
+- Skill Development Suggestions
+- Learning Resource Recommendations
+- Career Transition Support
+- Goal-Based Mentorship
+- Interactive AI Chat Assistant
+- Industry-Specific Advice
+
+
 ---
 
 ## 🛠 Tech Stack
