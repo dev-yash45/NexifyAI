@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Nexify | AI Daily Growth Engine
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/missions.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="missions-container">
+
+        <!-- HEADER -->
+
+        <section class="mission-header glass">
+
+            <h1>
+                🎯 AI Daily Growth Engine
+            </h1>
+
+            <p>
+                AI-powered personalized missions
+                generated from your skills,
+                projects, learning habits and
+                career goals.
+            </p>
+
+        </section>
+
+        <!-- CAREER SELECTOR -->
+
+        <section class="career-selector glass">
+
+            <h3>
+                Select Career Track
+            </h3>
+
+            <select id="careerTrack">
+
+                <option>Frontend Developer</option>
+                <option>Backend Developer</option>
+                <option>Full Stack Developer</option>
+                <option>AI Engineer</option>
+                <option>Data Scientist</option>
+                <option>Cyber Security Expert</option>
+
+            </select>
+
+            <button id="generateMissionBtn"
+                    class="primary-btn">
+
+                Generate AI Missions
+
+            </button>
+
+            <p id="aiStatus"
+               class="ai-status">
+
+                Ready To Generate Missions
+
+            </p>
+
+        </section>
+
+        <!-- ANALYSIS -->
+
+        <section class="analysis-grid">
+
+            <div class="analysis-card glass">
+
+                <h3>Current Level</h3>
+
+                <h2 id="userLevel">
+                    --
+                </h2>
+
+            </div>
+
+            <div class="analysis-card glass">
+
+                <h3>Career Match</h3>
+
+                <h2 id="careerMatch">
+                    --
+                </h2>
+
+            </div>
+
+            <div class="analysis-card glass">
+
+                <h3>Readiness Score</h3>
+
+                <h2 id="readinessScore">
+                    --
+                </h2>
+
+            </div>
+
+            <div class="analysis-card glass">
+
+                <h3>Focus Area</h3>
+
+                <h2 id="focusArea">
+                    --
+                </h2>
+
+            </div>
+
+            <div class="analysis-card glass">
+
+                <h3>Weakest Skill</h3>
+
+                <h2 id="weakestSkill">
+                    --
+                </h2>
+
+            </div>
+
+            <div class="analysis-card glass">
+
+                <h3>Next Milestone</h3>
+
+                <h2 id="nextLevel">
+                    --
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- CAREER GOAL -->
+
+        <section class="career-overview glass">
+
+            <h3>
+                🎯 Target Career
+            </h3>
+
+            <h2 id="targetCareer">
+
+                --
+
+            </h2>
+
+        </section>
+
+        <!-- PROGRESS -->
+
+        <section class="progress-section glass">
+
+            <div class="progress-top">
+
+                <h3>
+                    Mission Progress
+                </h3>
+
+                <span id="progressText">
+
+                    0 / 0 Completed
+
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div id="progressFill"
+                     class="progress-fill">
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- AI INSIGHT -->
+
+        <section class="glass ai-insight">
+
+            <h2>
+                🧠 AI Insight
+            </h2>
+
+            <p id="aiInsight">
+
+                Generate missions to receive
+                personalized career guidance.
+
+            </p>
+
+        </section>
+
+        <!-- DAILY MISSIONS -->
+
+        <section class="mission-section">
+
+            <div class="section-title">
+
+                <h2>
+                    Today's Personalized Missions
+                </h2>
+
+            </div>
+
+            <div id="missionContainer"
+                 class="mission-grid">
+
+            </div>
+
+        </section>
+
+        <!-- FUTURE PROJECTION -->
+
+        <section class="future-preview glass">
+
+            <h2>
+                🚀 Future Projection
+            </h2>
+
+            <p id="futureProjection">
+
+                Complete today's missions
+                to unlock your next growth stage.
+
+            </p>
+
+        </section>
+
+        <!-- XP SUMMARY -->
+
+        <section class="reward-section glass">
+
+            <div>
+
+                <h3>
+                    Estimated Time
+                </h3>
+
+                <h2 id="estimatedTime">
+
+                    0 Min
+
+                </h2>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Today's XP
+                </h3>
+
+                <h2 id="rewardPoints">
+
+                    +0 XP
+
+                </h2>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Total XP
+                </h3>
+
+                <h2 id="xpPoints">
+
+                    0 XP
+
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- ALL MISSIONS COMPLETED -->
+
+        <section id="completionSection"
+                 class="completion-section glass">
+
+            <h2>
+
+                🎉 Amazing Work!
+
+            </h2>
+
+            <p>
+
+                You completed all
+                today's AI missions.
+
+            </p>
+
+            <p>
+
+                Come back tomorrow
+                for fresh personalized missions.
+
+            </p>
+
+        </section>
+
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/missions.js"></script>
+
+</body>
+
+</html>

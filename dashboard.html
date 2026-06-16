@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Nexify Dashboard</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- Header -->
+
+        <section class="welcome-section glass">
+
+            <div>
+
+                <h1 id="welcomeName">
+                    Hello User 👋
+                </h1>
+
+                <p>
+                    Welcome back to Nexify
+                </p>
+
+            </div>
+
+            <div class="readiness-circle">
+
+                <span id="readinessScore">
+                    0%
+                </span>
+
+                <small>
+                    Readiness
+                </small>
+
+            </div>
+
+        </section>
+
+        <!-- Score Cards -->
+
+        <section class="score-grid">
+
+            <div class="score-card glass">
+
+                <h3>Skill Score</h3>
+
+                <h2 id="skillScore">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="score-card glass">
+
+                <h3>Project Score</h3>
+
+                <h2 id="projectScore">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="score-card glass">
+
+                <h3>Consistency</h3>
+
+                <h2 id="consistencyScore">
+                    0
+                </h2>
+
+            </div>
+
+            <div class="score-card glass">
+
+                <h3>Growth Score</h3>
+
+                <h2 id="growthScore">
+                    0
+                </h2>
+
+            </div>
+
+        </section>
+
+        <!-- Future Prediction -->
+
+        <section class="prediction-section">
+
+            <div class="prediction-card glass">
+
+                <h3>Current Path</h3>
+
+                <p id="currentPath">
+                    Loading...
+                </p>
+
+            </div>
+
+            <div class="prediction-card glass">
+
+                <h3>Improved Path</h3>
+
+                <p id="improvedPath">
+                    Loading...
+                </p>
+
+            </div>
+
+            <div class="prediction-card glass">
+
+                <h3>Best Path</h3>
+
+                <p id="bestPath">
+                    Loading...
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+
+        <section class="action-grid">
+
+            <a href="skillgap.html"
+               class="action-card glass">
+
+                🧠 Skill Gap Analyzer
+
+            </a>
+
+            <a href="missions.html"
+               class="action-card glass">
+
+                🎯 Daily Missions
+
+            </a>
+            
+            <a href="resume.html"
+               class="action-card glass">
+
+                🧠 Resume Analyzer
+
+            </a>
+            
+            <a href="linkedIn.html"
+               class="action-card glass">
+
+                🎯 LinkedIn Profile Analyzer
+
+            </a>
+        </section>
+
+    </div>
+
+    <script src="js/dashboard.js"></script>
+    
+    <script>
+
+      const profile =
+        JSON.parse(
+            localStorage.getItem(
+                "nexifyProfile"
+            )
+        );
+
+        const STORAGE_KEYS = {
+
+            profile:
+            "nexifyProfile",
+
+            xp:
+            "nexifyXP",
+
+            completed:
+            "nexifyCompletedMissions",
+
+            missions:
+            "nexifyDailyMissions",
+
+            lastDate:
+            "nexifyMissionDate"
+        };
+
+        let totalXP =
+    Number(
+
+        localStorage.getItem(
+            STORAGE_KEYS.xp
+        )
+
+    ) || 0;
+
+      window.difyChatbotConfig = {
+        token: '21QnuiPT9A0cz93F',
+        inputs: {
+          career:profile.goal,
+          skills:profile.skills.join(', '),
+          projects: profile.projects,
+          studyHours: profile.studyHours,
+          xp: totalXP,
+
+        },
+        systemVariables: {
+    // user_id: 'YOU CAN DEFINE USER ID HERE',
+    // conversation_id: 'YOU CAN DEFINE CONVERSATION ID HERE, IT MUST BE A VALID UUID',
+         },
+       userVariables: {
+    // avatar_url: 'YOU CAN DEFINE USER AVATAR URL HERE',
+    // name: 'YOU CAN DEFINE USER NAME HERE',
+       },
+    }
+    </script>
+    <script
+      src="https://udify.app/embed.min.js"
+      id="21QnuiPT9A0cz93F"
+      defer>
+    </script>
+    <style>
+       #dify-chatbot-bubble-button {
+        
+        background: linear-gradient(135deg,#6C63FF,#00D4FF);
+        border-radius: 50%;
+        box-shadow: 0 0 25px rgba(108,99,255,.5);
+        position: fixed;
+        right: 50px;
+        bottom: 90px;
+ 
+        }
+       #dify-chatbot-bubble-window {
+        
+        width: 420px;
+        height: 650px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+        position: sticky;
+        right: 200px;
+        bottom: 90px;
+        z-index: 9999;
+        }
+    </style>
+
+</body>
+
+</html>

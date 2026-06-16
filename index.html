@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexify | AI Student Growth OS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="bg-gradient"></div>
+    <div class="bg-blur blur-1"></div>
+    <div class="bg-blur blur-2"></div>
+
+    <!-- Navbar -->
+    <header class="navbar">
+
+        <div class="logo">
+            Nexify
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="#features">Features</a>
+            <a href="#future">Future</a>
+            <a href="#analytics">Analytics</a>
+
+        </nav>
+
+        <a href="profile.html" class="nav-btn">
+            Get Started
+        </a>
+
+    </header>
+
+    <!-- Hero -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                AI Powered Student Growth Operating System
+            </div>
+
+            <h1>
+                See Your Future.
+                <br>
+                Build It Smarter.
+            </h1>
+
+            <p>
+                Analyze your skills, habits, projects,
+                and career goals to unlock personalized
+                roadmaps, growth insights, and future predictions.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="profile.html" class="primary-btn">
+                    Start Analysis
+                </a>
+
+                <a href="#features" class="secondary-btn">
+                    Explore Features
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Stats -->
+
+    <section class="stats">
+
+        <div class="stat-card glass">
+            <h2>95%</h2>
+            <p>Prediction Accuracy</p>
+        </div>
+
+        <div class="stat-card glass">
+            <h2>50+</h2>
+            <p>Career Paths</p>
+        </div>
+
+        <div class="stat-card glass">
+            <h2>AI</h2>
+            <p>Personalized Mentor</p>
+        </div>
+
+    </section>
+
+    <!-- Features -->
+
+    <section id="features" class="features">
+
+        <div class="section-title">
+            <h2>Powerful Features</h2>
+            <p>Everything you need to grow faster.</p>
+        </div>
+
+        <div class="feature-grid">
+
+            <a href="dashboard.html" class="feature-card glass">
+                <h3>Career Dashboard</h3>
+                <p>Track readiness, consistency and progress.</p>
+            </a>
+
+            <a href="simulation.html" class="feature-card glass">
+                <h3>Future Simulation</h3>
+                <p>Predict multiple career outcomes.</p>
+            </a>
+
+            <a href="skillgap.html" class="feature-card glass">
+                <h3>Skill Gap Analyzer</h3>
+                <p>Discover missing skills instantly.</p>
+            </a>
+
+            <a href="mentor.html" class="feature-card glass">
+                <h3>AI Mentor</h3>
+                <p>Get personalized guidance using AI.</p>
+            </a>
+
+            <a href="missions.html" class="feature-card glass">
+                <h3>Daily Missions</h3>
+                <p>Receive smart tasks every day.</p>
+            </a>
+
+            <a href="analytics.html" class="feature-card glass">
+                <h3>Growth Analytics</h3>
+                <p>Visualize your progress using charts.</p>
+            </a>
+
+            <a href="radar.html" class="feature-card glass">
+                <h3>Opportunity Radar</h3>
+                <p>Hackathons, internships and opportunities.</p>
+            </a>
+
+            <a href="timeleak.html" class="feature-card glass">
+                <h3>Time Leak Detector</h3>
+                <p>Find and eliminate productivity leaks.</p>
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- AI Preview -->
+
+    <section class="ai-preview">
+
+        <div class="section-title">
+            <h2>AI Career Intelligence</h2>
+            <p>Smart insights generated from your profile.</p>
+        </div>
+
+        <div class="preview-container glass">
+
+            <div class="preview-item">
+                <h3>Career Readiness</h3>
+                <span>87%</span>
+            </div>
+
+            <div class="preview-item">
+                <h3>Growth Potential</h3>
+                <span>High</span>
+            </div>
+
+            <div class="preview-item">
+                <h3>Risk Level</h3>
+                <span>Low</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Future Timeline -->
+
+    <section id="future" class="timeline">
+
+        <div class="section-title">
+            <h2>Future Roadmap</h2>
+            <p>Your growth journey visualized.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+
+            <div class="timeline-card glass">
+                <h3>2026</h3>
+                <p>Skill Building</p>
+            </div>
+
+            <div class="timeline-card glass">
+                <h3>2027</h3>
+                <p>Projects & Portfolio</p>
+            </div>
+
+            <div class="timeline-card glass">
+                <h3>2028</h3>
+                <p>Internships</p>
+            </div>
+
+            <div class="timeline-card glass">
+                <h3>2029</h3>
+                <p>Placements</p>
+            </div>
+
+            <div class="timeline-card glass">
+                <h3>2030</h3>
+                <p>Career Growth</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Analytics Preview -->
+
+    <section id="analytics" class="analytics">
+
+        <div class="section-title">
+            <h2>Growth Analytics</h2>
+            <p>Track your progress visually.</p>
+        </div>
+
+        <div class="chart-card glass">
+            <canvas id="growthChart"></canvas>
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="cta-box glass">
+
+            <h2>
+                Ready To Unlock Your Future?
+            </h2>
+
+            <p>
+                Start your personalized AI career journey today.
+            </p>
+
+            <a href="profile.html" class="primary-btn">
+                Launch Nexify
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <h2>Nexify</h2>
+
+        <p>
+            AI Powered Student Growth Operating System
+        </p>
+
+        <p>
+            Built for ambitious students.
+        </p>
+
+    </footer>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexify | Profile Setup</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="profile-container glass">
+	
+        <div class="profile-header">
+
+            <h1>Complete Your Profile</h1>
+
+            <p>
+                Help Nexify understand your current situation.
+            </p>
+
+        </div>
+
+        <form id="profileForm">
+
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+
+            <div class="input-group">
+                <label>Year</label>
+                <select id="year">
+
+                    <option>1st Year</option>
+                    <option>2nd Year</option>
+                    <option>3rd Year</option>
+                    <option>4th Year</option>
+
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Branch</label>
+
+                <select id="branch">
+
+                    <option>CSE</option>
+                    <option>IT</option>
+                    <option>ECE</option>
+                    <option>EEE</option>
+                    <option>Mechanical</option>
+
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Skills (comma separated)</label>
+                <input type="text"
+                    id="skills"
+                    placeholder="HTML, CSS, JavaScript">
+            </div>
+
+            <div class="input-group">
+                <label>Study Hours Per Day</label>
+                <input type="number"
+                    id="studyHours"
+                    min="0"
+                    max="24">
+            </div>
+
+            <div class="input-group">
+                <label>Projects Completed</label>
+                <input type="number"
+                    id="projects"
+                    min="0">
+            </div>
+
+            <div class="input-group">
+                <label>Career Goal</label>
+
+                <select id="goal">
+
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>Full Stack Developer</option>
+                    <option>AI Engineer</option>
+                    <option>Data Scientist</option>
+                    <option>Cyber Security Expert</option>
+
+                </select>
+
+            </div>
+
+            <button type="submit"
+                class="primary-btn">
+                Generate Analysis
+            </button>
+
+        </form>
+
+    </div>
+
+    <script src="js/profile.js"></script>
+
+</body>
+
+</html>

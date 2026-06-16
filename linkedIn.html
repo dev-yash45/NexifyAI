@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Profile Analyzer</title>
+
+    <link rel="stylesheet" href="css/linkedIN.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@3.0.1/dist/chartjs-plugin-annotation.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Hero -->
+
+    <section class="hero-card">
+
+        <div class="hero-icon">
+            🔗
+        </div>
+
+        <h1>
+            LinkedIn Intelligence
+        </h1>
+
+        <p>
+            Upload your LinkedIn profile PDF and receive AI-powered profile analysis, keyword optimization, networking insights and growth recommendations.
+        </p>
+
+    </section>
+
+    <!-- Upload Section -->
+
+    <section class="upload-card">
+
+        <h2>
+            Upload LinkedIn Profile
+        </h2>
+
+        <div class="file-box">
+
+            <input
+                type="file"
+                id="linkedinFile"
+                accept=".pdf"
+            >
+
+        </div>
+
+        <button
+            id="analyzeLinkedInBtn"
+            class="primary-btn"
+        >
+            Analyze LinkedIn Profile
+        </button>
+
+    </section>
+
+    <!-- Score Cards -->
+
+    <section class="score-grid">
+
+        <div class="score-card">
+
+            <h3>Profile Score</h3>
+
+            <span
+                id="profileScore"
+                class="big-score"
+            >
+                --
+            </span>
+
+        </div>
+
+        <div class="score-card">
+
+            <h3>Headline Score</h3>
+
+            <span
+                id="headlineScore"
+                class="big-score"
+            >
+                --
+            </span>
+
+        </div>
+
+        <div class="score-card">
+
+            <h3>Keyword Score</h3>
+
+            <span
+                id="keywordScore"
+                class="big-score"
+            >
+                --
+            </span>
+
+        </div>
+
+        <div class="score-card">
+
+            <h3>Network Strength</h3>
+
+            <span
+                id="networkStrength"
+                class="big-score"
+            >
+                --
+            </span>
+
+        </div>
+
+    </section>
+
+        <!-- Analysis Grid -->
+
+    <section class="analysis-grid">
+
+        <!-- Strengths -->
+
+        <div class="analysis-card">
+
+            <h2>
+                💪 Strengths
+            </h2>
+
+            <ul
+                id="strengthsList"
+                class="list-box">
+
+                <li>
+                    Waiting for analysis...
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Weak Areas -->
+
+        <div class="analysis-card">
+
+            <h2>
+                ⚠ Weak Areas
+            </h2>
+
+            <ul
+                id="weakAreasList"
+                class="list-box">
+
+                <li>
+                    Waiting for analysis...
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- Improvements -->
+
+    <section class="analysis-card full-width">
+
+        <h2>
+            🚀 Improvement Suggestions
+        </h2>
+
+        <ul
+            id="improvementsList"
+            class="list-box">
+
+            <li>
+                AI recommendations will appear here.
+            </li>
+
+        </ul>
+
+    </section>
+
+    <!-- Keyword Suggestions -->
+
+    <section class="analysis-card full-width">
+
+        <h2>
+            🎯 Keyword Suggestions
+        </h2>
+
+        <div
+            id="keywordSuggestions"
+            class="tag-container">
+
+        </div>
+
+    </section>
+
+       <!-- Profile Level -->
+
+    <section class="score-grid">
+
+        <div class="score-card">
+
+            <h3>
+                Profile Level
+            </h3>
+
+            <span
+                id="profileLevel"
+                class="level-badge">
+
+                --
+
+            </span>
+
+        </div>
+
+        <div class="score-card">
+
+            <h3>
+                About Section Score
+            </h3>
+
+            <span
+                id="aboutSectionScore"
+                class="big-score">
+
+                --
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- Optimized Headline -->
+
+    <section class="analysis-card full-width">
+
+        <h2>
+            ✨ Optimized Headline
+        </h2>
+
+        <p
+            id="optimizedHeadline">
+
+            AI optimized headline
+            will appear here.
+
+        </p>
+
+    </section>
+
+    <!-- Optimized About -->
+
+    <section class="analysis-card full-width">
+
+        <h2>
+            📝 Optimized About Section
+        </h2>
+
+        <p
+            id="optimizedAbout">
+
+            AI optimized about
+            section will appear here.
+
+        </p>
+
+    </section>
+
+    <!-- Final Verdict -->
+
+    <section class="analysis-card full-width verdict-card">
+
+        <h2>
+            🤖 AI Verdict
+        </h2>
+
+        <p
+            id="finalVerdict">
+
+            Upload your LinkedIn PDF
+            to receive professional
+            AI feedback.
+
+        </p>
+
+    </section>
+
+  </div>
+  
+  <section class="analytics-card linkedin-analytics">
+
+    <div class="analytics-header">
+        <h2>
+            🔗 LinkedIn Intelligence
+        </h2>
+
+        <span class="ai-badge">
+            AI Powered
+        </span>
+    </div>
+
+    <div class="chart-container">
+        <canvas id="linkedinChart"></canvas>
+    </div>
+
+    <div class="analytics-insights">
+
+        <div class="insight-card">
+            <span>STRONGEST</span>
+            <h3 id="linkedinStrongest">
+                --
+            </h3>
+        </div>
+
+        <div class="insight-card">
+            <span>WEAKEST</span>
+            <h3 id="linkedinWeakest">
+                --
+            </h3>
+        </div>
+
+        <div class="insight-card">
+            <span>PROFILE POTENTIAL</span>
+            <h3 id="linkedinPotential">
+                --
+            </h3>
+        </div>
+
+    </div>
+
+</section>
+
+  <script src="js/linkedIn.js"></script>
+
+</body>
+</html>
