@@ -1,0 +1,125 @@
+.skillgap-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:40px 6%;
+}
+
+.hero-card{
+
+    text-align:center;
+
+    padding:40px;
+
+    margin-bottom:30px;
+}
+
+.hero-card h1{
+
+    margin-bottom:15px;
+
+    font-size:2.5rem;
+}
+
+.hero-card p{
+
+    color:var(--muted);
+}
+
+.analyzer-card{
+
+    padding:30px;
+
+    margin-bottom:30px;
+}
+
+.input-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.input-group label{
+
+    font-weight:600;
+}
+
+.input-group select{
+
+    padding:15px;
+
+    border-radius:14px;
+
+    background:black;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    color:white;
+}
+
+.result-section{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:20px;
+}
+
+.primary-btn{
+	margin-top:20px;
+}
+
+.skill-card{
+
+    padding:25px;
+
+    transition:.3s;
+}
+
+.skill-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.skill-card h3{
+
+    color:#06b6d4;
+
+    margin-bottom:15px;
+}
+
+.skill-card p{
+
+    color:var(--muted);
+}
+
+.skill-score{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    margin-top:15px;
+}
+
+select{
+    width:100%;
+    padding:18px 20px;
+    background:#2b3245;
+    color:#ffffff;
+    border:none;
+    border-radius:14px;
+    font-size:16px;
+}
+
+select option{
+    background:#2b3245;
+    color:#ffffff;
+}

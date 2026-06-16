@@ -1,0 +1,220 @@
+/* ==========================
+   PROFILE PAGE
+========================== */
+
+body{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 20px;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.profile-container{
+
+    width:100%;
+    max-width:700px;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(25px);
+
+    animation:fadeUp .8s ease;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.profile-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.profile-header h1{
+
+    font-size:2.5rem;
+    margin-bottom:10px;
+
+    background:linear-gradient(
+    90deg,
+    #7c3aed,
+    #06b6d4);
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.profile-header p{
+    color:var(--muted);
+}
+
+/* ==========================
+   FORM
+========================== */
+
+#profileForm{
+
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+/* ==========================
+   INPUT GROUP
+========================== */
+
+.input-group{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.input-group label{
+
+    color:white;
+    font-weight:500;
+}
+
+/* ==========================
+   INPUTS
+========================== */
+
+.input-group input,
+.input-group select{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border-radius:14px;
+
+    border:1px solid
+    rgba(255,255,255,.1);
+
+    background:
+    rgba(255,255,255,.05);
+
+    color:white;
+
+    outline:none;
+
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+
+    border-color:#7c3aed;
+
+    box-shadow:
+    0 0 20px
+    rgba(124,58,237,.3);
+}
+
+/* ==========================
+   PLACEHOLDER
+========================== */
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+/* ==========================
+   SELECT OPTIONS
+========================== */
+
+select option{
+    background:#111827;
+    color:white;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.primary-btn{
+
+    border:none;
+    cursor:pointer;
+
+    margin-top:10px;
+
+    padding:16px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #7c3aed,
+    #06b6d4);
+
+    color:white;
+
+    transition:.4s;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px
+    rgba(124,58,237,.35);
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+    }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .profile-container{
+
+        padding:25px;
+    }
+
+    .profile-header h1{
+
+        font-size:2rem;
+    }
+}
